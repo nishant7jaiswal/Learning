@@ -37,4 +37,9 @@ public class LoginApp{
     }
 
 
+    @When("User enter the {word} and {word} in login fields")
+    public void userEnterTheUsernameAndPasswordInLoginFields(String Username , String Password) {
+        testDriver.getPageManagerHelper().getLoginPage().setUserName(Username);
+        testDriver.getPageManagerHelper().getLoginPage().setPassword(Password);
+    }
 }
